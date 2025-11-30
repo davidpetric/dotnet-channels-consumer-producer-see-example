@@ -1,0 +1,16 @@
+@HostAddress = http://localhost:5241
+
+POST {{HostAddress}}/orders
+Content-Type: application/json
+Accept: application/json
+
+{
+  "Products": [
+    {
+      "Name": "1",
+      "Price": 1,
+      "Quantity": 1
+    }
+  ]
+}
+
