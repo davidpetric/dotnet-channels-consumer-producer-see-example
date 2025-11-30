@@ -40,10 +40,13 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI(opt =>
     {
         opt.SwaggerEndpoint("/openapi/v1.json", "v1");
+        opt.InjectJavascript("/swagger-sse-support.js");
     });
 }
 
 app.UseHttpsRedirection();
+
+app.UseStaticFiles();
 
 app.UseAuthorization();
 
